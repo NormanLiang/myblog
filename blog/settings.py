@@ -25,7 +25,9 @@ SECRET_KEY = 's-a7@v3e7#29jo5d)%ev4(70p^tgs&-fiwt_tn4+2dwj_t(&sm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['boringpro.com',
+                '45.77.17.218',
+                'localhost',]
 
 
 # Application definition
@@ -126,6 +128,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_HOST_USER = '86317539@qq.com'
