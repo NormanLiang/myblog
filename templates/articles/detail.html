@@ -1,0 +1,34 @@
+
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    Articles
+{% endblock title %}
+
+{% block content %}
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>{{ article.body|safe }}</p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <hr>
+
+  <script>
+    function confirm_delete() {
+
+        layer.open({
+            title: 'Delete Confirm',
+            content: 'Are you sure?',
+            yes: function(index, layero) {
+                location.href = "{% url 'articles:article_delete' article.id %}"
+            },
+        })
+    }
+  </script>
+{% endblock content %}

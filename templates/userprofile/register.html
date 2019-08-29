@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+<!-- index Content -->
+{% block title %}
+  Register
+{% endblock title %}
+
+{% block content %}
+
+  <!-- Post Content -->
+  <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <br>
+                <!-- 提交文章的表单 -->
+                <form method="post" action=".">
+                    <!-- Django中需要POST数据的地方都必须有csrf_token -->
+                    {% csrf_token %}
+                <!-- 账号 -->
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <!-- 邮箱 -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" name="email">
+                    </div>
+                    <!-- 密码 -->
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <!-- 确认密码 -->
+                    <div class="form-group">
+                        <label for="password2">再输一次</label>
+                        <input type="password" class="form-control" id="password2" name="password2" required>
+                    </div>
+                    <!-- 提交按钮 -->
+                    <button type="submit" class="btn btn-primary">提交</button>
+                </form>
+            </div>
+        </div>
+    </div>  
+  <hr>
+{% endblock content %} 
