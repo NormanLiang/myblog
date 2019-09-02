@@ -27,7 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['boringpro.com',
                 '45.77.17.218',
-                'localhost',]
+                'localhost',
+                'www.boringpro.com',
+                '127.0.0.1']
 
 
 # Application definition
