@@ -126,12 +126,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
-]
-
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+#STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_HOST_USER = '86317539@qq.com'
@@ -140,3 +135,6 @@ EMAIL_PORT = 25
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'sansheng <86317539@qq.com>'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
