@@ -1,10 +1,25 @@
 
 {% extends "base.html" %}
-{% load staticfiles %}
+{% load static %}
 
 {% block title %}
     Articles
 {% endblock title %}
+
+{% block header %}
+<header class="masthead" style="background-image: url('{% static 'img/main_bk3.jpg' %}')">
+  <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="input-heading">
+            <h1>江湖人称昆仑三圣</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+{% endblock header %}
 
 {% block content %}
   <!-- Post Content -->
